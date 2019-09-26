@@ -1,6 +1,7 @@
 import React from 'react';
 //import styled from 'styled-components';
 import Header from '../components/Header';
+import List from '../components/List';
 class HomeScreen extends React.Component {
     state = {
     }
@@ -13,6 +14,9 @@ class HomeScreen extends React.Component {
       return (
         <div >
           <Header />
+          <div>
+            <List />
+          </div>
         </div>
         
       );

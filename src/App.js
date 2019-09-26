@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Route} from "react-router-dom"
 import HomeScreen from './screens/HomeScreen';
 import ListScreen from './screens/ListScreen';
 import CreateScreen from './screens/CreateScreen';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AppNavigator = () =>(
   <Router>
