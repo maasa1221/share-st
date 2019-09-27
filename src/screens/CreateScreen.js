@@ -8,25 +8,30 @@ class CreateScreen extends React.Component {
   
   render() {
     return (
-      <div >
+      <Create_contena>
         <Header />
-
         <p >
         提供方法
         </p>
-        <Proimg src={tempAvatar}/>  
+        <p >
+        イメージ画像
+        </p>
+        <Proimg src={tempAvatar}/><br/>
         <input 
           type="file"
           id="avatar" 
           name="avatar"
           accept="image/png, image/jpeg"
        />
-        <p >
-        プラン名
-        </p>
-        <input
-          placeholder="名前"
+       <br/>
+        <Input_box>
+          <p >
+          プラン名：
+          </p>
+          <input
+            placeholder="名前"
           />
+        </Input_box>
         <p >
         会社名
         </p>
@@ -51,11 +56,11 @@ class CreateScreen extends React.Component {
         <input
           placeholder="例:22"
         />
-        
+        <br/>
        <button>
         <Link to={`/home`}>作成</Link>
        </button>
-      </div>
+      </Create_contena>
     );
   }
 }
@@ -64,6 +69,16 @@ const Proimg = styled.img`
 border-radius: 50%; 
 width:  150px;       
 height: 150px; 
+`;
+const Create_contena = styled.div`
+text-align: center;
+
+`;
+
+const Input_box = styled.div`
+display: inline-box;
+margin: 50px;
+padding: auto;
 `;
 
 

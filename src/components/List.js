@@ -6,7 +6,7 @@ const tempAvatar = 'https://firebasestorage.googleapis.com/v0/b/novels-a5884.app
 class ProList extends React.Component {
   render() {
     return (
-      <div >
+      <List_container>
         <Probox>
         <Proimg src={tempAvatar}/>  
         <Texttitle>インドアセールスの設計の仕方</Texttitle>
@@ -24,9 +24,7 @@ class ProList extends React.Component {
         <Texttitle>インドアセールスの設計の仕方</Texttitle>
         <Textname>Gifts Japan</Textname>
         </Probox>
-
-        
-      </div>
+      </List_container>
     );
   }
 }
@@ -36,6 +34,10 @@ const Proimg = styled.img`
   width:  150px;       
   height: 150px; 
   position: relative;
+`;
+const List_container = styled.div`
+  width: 80%;
+  margin: auto;
 `;
 const Texttitle = styled.p`
   font-size: 25px;
