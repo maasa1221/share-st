@@ -29,26 +29,25 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <Create_contena>
+      return <Stepper_in>
                 <p>提供方法</p>
                 <p>イメージ画像</p>
                 <Proimg src={tempAvatar}/><br/>
                 <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/><br/>
-                
-            </Create_contena>;
+            </Stepper_in>;
     case 1:
-      return <Create_contena>
+      return <Stepper_in>
               <p>会社名</p>
               <input placeholder="例:170"/>
-            </Create_contena>;
+            </Stepper_in>;
     case 2:
-      return <Create_contena>
+      return <Stepper_in>
                 <Input_box>
                   <Input_p>プラン名：</Input_p>
                   <Input_place placeholder="名前"/>
                 </Input_box>
                 <Input_box>
-                <Input_p>価格：</Input_p>
+                <Input_p>　　価格：</Input_p>
                 <Input_place placeholder="例:22"/>
                 </Input_box>
                 <Input_box>
@@ -56,10 +55,10 @@ function getStepContent(step) {
                 <Input_place placeholder="例:22"/>
                 </Input_box>
                 <Input_box>
-                <Input_p>詳細：</Input_p>
+                <Input_p>　　詳細：</Input_p>
                 <Input_place placeholder="例:22"/>
                 </Input_box><br/>
-            </Create_contena>;
+            </Stepper_in>;
     default:
       return 'Unknown step';
   }
@@ -100,30 +99,30 @@ export default function HorizontalLabelPositionBelowStepper() {
 
 
       <Create_contena>
-      <Button_contena>
-        {activeStep === steps.length ? (
-          <div>
-            <Typography className={classes.instructions}>All steps completed</Typography>
-            <Button onClick={handleReset} color="primary"  variant="contained">Reset</Button>
-          </div>
-        ) : (
-          <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+        <div>
+          {activeStep === steps.length ? (
             <div>
-              <Button
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                className={classes.backButton}
-              >
-                Back
-              </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+              <Typography className={classes.instructions}>作成完了</Typography>
+              <Button onClick={handleReset} color="primary"  variant="contained">Reset</Button>
             </div>
-          </div>
-        )}
-      </Button_contena>
+          ) : (
+            <div>
+              <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+              <Button_contena>
+                <Button
+                  disabled={activeStep === 0}
+                  onClick={handleBack}
+                  className={classes.backButton}
+                >
+                  Back
+                </Button>
+                <Button variant="contained" color="primary" onClick={handleNext}>
+                  {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                </Button>
+              </Button_contena>
+            </div>
+          )}
+        </div>
       </Create_contena>
       </div>
       
@@ -148,6 +147,18 @@ const Create_contena = styled.div`
   margin: auto;
   padding-top: 50px
   padding-bottom: 50px
+  height: 500px;
+  position: relative;
+
+`;
+
+const Stepper_in = styled.div`
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  width:100%;
+  
+
 
 `;
 
@@ -163,9 +174,10 @@ const Input_p=styled.p`
   display: inline-box;
 `;
 
-const Button_contena=styled.p`
+const Button_contena=styled.div`
+position: absolute;
 text-align: right;
-margin-right: 20px;
-margin-bottom: -20px;
+bottom: 20px
+right: 20px;
 
 `;
