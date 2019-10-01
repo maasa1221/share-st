@@ -95,6 +95,7 @@ const Texttitle = styled.p`
   font-size: 25px;
   position: relative;
   color: #000;
+  font-weight:bold; 
 `;
 const Textname = styled.p`
   font-size: 20px;
