@@ -3,35 +3,46 @@ import styled from 'styled-components';
 import {Link} from "react-router-dom"
 const tempAvatar = 'https://firebasestorage.googleapis.com/v0/b/novels-a5884.appspot.com/o/temp%2Ftemp.png?alt=media&token=a4d36af6-f5e8-49ad-b9c0-8b5d4d899c0d'
 
+
+
+const Contents_Box = (data) => {
+  var list = [];
+  for(var i in data){
+    list.push(
+      <Probox>
+        <Link to = {`/detail/${data[i].id}`} >
+        <Proimg src={data[i].image}/>  
+        <Texttitle>{data[i].content_title}</Texttitle>
+        <Textname>{data[i].company_name}</Textname>
+        </Link>
+      </Probox>
+    );
+  }
+  return(
+    <ul>
+      {list}
+    </ul>
+  );
+}
+
 class ProList extends React.Component {
 
   state={
-    list_square:{
+    list_square:[{
       image:tempAvatar,
-      title:"インドアセールスの設計の仕方",
+      content_title:"インドアセールスの設計の仕方",
       company_name:"Gifts Japan",
-    }
+    },
+    {
+      image:tempAvatar,
+      content_title:"インドアセールスの設計の仕方",
+      company_name:"Gifts Japan",
+    }]
   }
   render() {
     return (
       <List_container>
-        <Probox>
-        <Proimg src={this.state.list_square.image}/>  
-        <Texttitle>{this.state.list_square.title}</Texttitle>
-        <Textname>{this.state.list_square.company_name}</Textname>
-        </Probox>
-
-        <Probox>
-        <Proimg src={tempAvatar}/>  
-        <Texttitle>インドアセールスの設計の仕方</Texttitle>
-        <Textname>Gifts Japan</Textname>
-        </Probox>
-
-        <Probox>
-        <Proimg src={tempAvatar}/>  
-        <Texttitle>インドアセールスの設計の仕方</Texttitle>
-        <Textname>Gifts Japan</Textname>
-        </Probox>
+        {Contents_Box(this.state.list_square)}
       </List_container>
     );
   }
