@@ -16,18 +16,6 @@ function getSteps() {
   return ['イメージ画像選択', '会社詳細', '提供詳細'];
 }
 
-function getStepContent(stepIndex) {
-  switch (stepIndex) {
-    case 0:
-      return 'Select campaign settings...';
-    case 1:
-      return 'What is an ad group anyways?';
-    case 2:
-      return 'This is the bit I really care about!';
-    default:
-      return 'Uknown stepIndex';
-  }
-}
 
 
 const steps = getSteps();
