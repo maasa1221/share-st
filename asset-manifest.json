@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/share-st/static/css/main.b100e6da.chunk.css",
-    "main.js": "/share-st/static/js/main.6208e465.chunk.js",
-    "main.js.map": "/share-st/static/js/main.6208e465.chunk.js.map",
-    "runtime-main.js": "/share-st/static/js/runtime-main.269ca09f.js",
-    "runtime-main.js.map": "/share-st/static/js/runtime-main.269ca09f.js.map",
-    "static/css/2.0624914a.chunk.css": "/share-st/static/css/2.0624914a.chunk.css",
-    "static/js/2.bcbff869.chunk.js": "/share-st/static/js/2.bcbff869.chunk.js",
-    "static/js/2.bcbff869.chunk.js.map": "/share-st/static/js/2.bcbff869.chunk.js.map",
-    "index.html": "/share-st/index.html",
-    "precache-manifest.d24630d45b792b000ea9e1f97d1ff424.js": "/share-st/precache-manifest.d24630d45b792b000ea9e1f97d1ff424.js",
-    "service-worker.js": "/share-st/service-worker.js",
-    "static/css/2.0624914a.chunk.css.map": "/share-st/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.b100e6da.chunk.css.map": "/share-st/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.png": "/share-st/static/media/logo.7db85b19.png"
+    "main.css": "./static/css/main.b100e6da.chunk.css",
+    "main.js": "./static/js/main.74ce9bd6.chunk.js",
+    "main.js.map": "./static/js/main.74ce9bd6.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.837cee6c.js",
+    "runtime-main.js.map": "./static/js/runtime-main.837cee6c.js.map",
+    "static/css/2.0624914a.chunk.css": "./static/css/2.0624914a.chunk.css",
+    "static/js/2.f32c04ab.chunk.js": "./static/js/2.f32c04ab.chunk.js",
+    "static/js/2.f32c04ab.chunk.js.map": "./static/js/2.f32c04ab.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.719cbd828598b870d0341808954b8fac.js": "./precache-manifest.719cbd828598b870d0341808954b8fac.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "./static/css/2.0624914a.chunk.css.map",
+    "static/css/main.b100e6da.chunk.css.map": "./static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.png": "./static/media/logo.7db85b19.png"
   }
 }
