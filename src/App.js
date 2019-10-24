@@ -11,13 +11,9 @@ const AppNavigator = () => (
   <Router basename={process.env.PUBLIC_URL}>
     <div>
       <Route exact path="/" component={HomeScreen} />
-      <Route path="/list" component={ListScreen} />
-      <Route path="/create" component={CreateScreen} />
-
-      <Route exact path="/" component={HomeScreen} />
-      <Route path="/list" component={ListScreen} />
-      <Route path="/create" component={CreateScreen} />
-      <Route path="/setting" component={SettingScreen} />
+      <Route path="list" component={ListScreen} />
+      <Route path="create" component={CreateScreen} />
+      <Route path="setting" component={SettingScreen} />
     </div>
   </Router>
 );
