@@ -8,13 +8,11 @@ import SettingScreen from "./screens/SettingScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const AppNavigator = () => (
-  <Router basename={process.env.PUBLIC_URL}>
-    <div>
-      <Route exact path="/" component={HomeScreen} />
-      <Route path="list" component={ListScreen} />
-      <Route path="create" component={CreateScreen} />
-      <Route path="setting" component={SettingScreen} />
-    </div>
+  <Router>
+    <Route exact path="/" component={HomeScreen} />
+    <Route path="/list" component={ListScreen} />
+    <Route path="/create" component={CreateScreen} />
+    <Route path="/setting" component={SettingScreen} />
   </Router>
 );
 
